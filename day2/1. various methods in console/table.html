@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript console.table() Method</h1>
+
+<p>The console.table() method writes a table in the console view.<br>
+
+The first parameter is required, and must be either an object, or an array, containing data to fill the table.</p>
+
+<script>
+//method 1
+var car1 = { name : "Audi", model : "A4" }
+var car2 = { name : "Volvo", model : "XC90" }
+var car3 = { name : "Ford", model : "Fusion" }
+
+console.table([car1, car2, car3]);
+
+console.table([car1, car2, car3], ["model"]);
+
+//method 2
+console.table(["Audi", "Volvo", "Ford"]);
+//method 3
+console.table({ firstname : "John", lastname : "Doe" });
+</script>
+
+</body>
+</html>

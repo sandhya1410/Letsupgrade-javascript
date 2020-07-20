@@ -1,0 +1,356 @@
+
+<!--assert -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> console.assert() Method</h1>
+<p>Assert is a Java keyword used to define an assert statement. An assert statement is used to declare an expected boolean condition in a program. If the program is running with assertions enabled, then the condition is checked at runtime. If the condition is false, the Java runtime system throws an AssertionError.</p>
+
+<script>
+	//method 1
+console.assert(document.getElementById("demo"), "You have no element with ID 'demo'");
+//method 2
+var myArr = ["Orange", "Banana", "Mango", "Kiwi" ];
+
+console.assert(document.getElementById("demo"), myArr);
+//method 3
+var myObj = { firsname : "John", lastname : "Doe" };
+
+console.assert(document.getElementById("demo"),myObj);
+</script>
+
+
+</body>
+</html>
+
+
+<!-- count-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> console.count() Method</h1>
+
+<p>Writes to the console the number of times that particular console.count() is called.<br>
+
+You can add a label that will be included in the console view. By default the label "default" will be added.
+
+</p>
+
+<script>
+	//method 1
+console.count();
+console.count();
+//method 2
+console.count("myLabel");
+console.count("myLabel");
+//method 3
+for (i = 0; i < 10; i++) {
+  console.count();
+}
+
+</script>
+
+</body>
+</html>
+
+<!-- error-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> console.error() Method</h1>
+<p>The console.error() method writes an error message to the console.</p>
+
+<script>
+//method 1
+console.error("You made a mistake");
+//method 2
+var myObj = { firsname : "John", lastname : "Doe" };
+console.error(myObj);
+//method 3
+var myArr = ["Orange", "Banana", "Mango", "Kiwi" ];
+console.error(myArr);
+
+</script>
+
+</body>
+</html>
+
+
+<!-- info-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> console.info() Method</h1>
+
+<p>The console.info() method writes a message to the console.</p>
+
+<script>
+//method 1
+console.info("Hello world!");
+//method 2
+var myObj = { firsname : "John", lastname : "Doe" };
+console.info(myObj);
+//method 3
+var myArr = ["Orange", "Banana", "Mango", "Kiwi" ];
+console.info(myArr);
+//method 4 display method2 in console
+var myArr = ["Orange", "Banana", "Mango", "Kiwi" ];
+console.info(myObj);
+
+</script>
+
+</body>
+</html>
+
+<!--log -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> console.log() Method</h1>
+
+<p>The console.log() method writes a message to the console.<br>
+
+The console is useful for testing purposes.</p>
+
+<script>
+//method1
+console.log("Hello world!");
+//method2
+var myObj = { firstname : "John", lastname : "Doe" };
+console.log(myObj);
+//method3
+var myArr = ["Orange", "Banana", "Mango", "Kiwi" ];
+console.log(myArr);
+</script>
+
+</body>
+</html>
+
+<!--table-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> console.table() Method</h1>
+
+<p>The console.table() method writes a table in the console view.<br>
+
+The first parameter is required, and must be either an object, or an array, containing data to fill the table.</p>
+
+<script>
+//method 1
+var car1 = { name : "Audi", model : "A4" }
+var car2 = { name : "Volvo", model : "XC90" }
+var car3 = { name : "Ford", model : "Fusion" }
+
+console.table([car1, car2, car3]);
+
+console.table([car1, car2, car3], ["model"]);
+
+//method 2
+console.table(["Audi", "Volvo", "Ford"]);
+//method 3
+console.table({ firstname : "John", lastname : "Doe" });
+</script>
+
+</body>
+</html>
+
+<!--time-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> console.time() Method</h1>
+
+<p>The console.time() method starts a timer in the console view.<br>
+
+This method allows you to time certain operations in your code for testing purposes.<br>
+
+Use the console.timeEnd() method to end the timer and display the result in the console.view.<br>
+
+Use the label parameter to name the timer, then you are able to have many timers on the same page.</p>
+
+<p>Time the number of milliseconds it takes to perform a for-loop a hundred thousand times.</p>
+
+
+<script>
+//method 1
+console.time();
+for (i = 0; i < 100000; i++) {
+  // some code
+}
+console.timeEnd();
+
+</script>
+
+<script>
+	//method 2
+var i;
+console.time("test1");
+for (i = 0; i < 100000; i++) {
+  // some code
+}
+console.timeEnd("test1");
+
+</script>
+
+<p>Time the number of milliseconds it takes to perform a for-loop a hundred thousand times.</p>
+
+<p>This example demonstrates how to use the label parameter</p>
+
+<p>Make sure you use the same label when calling the console.timeEnd() method.</p>
+
+<script>
+	//method 3
+var i;
+console.time("test for loop");
+for (i = 0; i < 1000000; i++) {
+  // some code
+}
+console.timeEnd("test for loop");
+
+i = 0;
+console.time("test while loop");
+while (i < 1000000) {
+  i++
+}
+console.timeEnd("test while loop");
+
+</script>
+</body>
+</html>
+
+
+
+<!--warn-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> console.warn() Method</h1>
+
+<p>The console.warn() method writes a warning to the console.</p>
+
+<script>
+//method 1
+console.warn("This is a warning!");
+
+//method 2
+var myObj = { firstname : "John", lastname : "Doe" };
+console.warn(myObj);
+
+//method 3
+
+var myArr = ["Orange", "Banana", "Mango", "Kiwi" ];
+console.warn(myArr);
+
+</script>
+
+</body>
+</html>
+
+
+
+<!-- group-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> console.group() Method</h1>
+
+<p>The console.group() method indicates the start of a message group.<br>
+
+All messages will from now on be written inside this group.<br>
+
+ Use the console.groupEnd() method to end the group.<br>
+
+ Use the console.groupCollapsed() method to hide the message group (collapsed by default).</p>
+
+<script>
+//method 1
+console.log("Hello world!");
+//method 2
+console.groupCollapsed();
+console.log("Hello again, this time inside a collapsed group!");
+
+//method 3
+console.group();
+console.log("Hello again, this time inside a group!");
+console.log("Hello again");
+console.log("Hello ****");
+//method 4
+console.groupEnd();
+console.log("out of group.");
+
+</script>
+
+</body>
+</html>
+
+<!-- clear -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> console.clear() Method</h1>
+
+<p>The console.clear() method clears the console.<br>
+
+The console.clear() method will also write a message in the console: "Console was cleared".</p>
+
+<button onclick="myFunction()">Clear Console</button>
+
+<script>
+
+console.log("Hello! Press the button to clear the console!");
+
+function myFunction() {
+  console.clear();
+}
+
+</script>
+
+</body>
+</html>
+
+<!-- trace-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> console.trace() Method</h1>
+
+<p>By clicking the button, a function will be executed, which will execute another function, which will execute the console.trace() method, which will display this trace in the console.view.</p>
+
+<button onclick="myFunction()">Start Trace</button>
+
+<script>
+
+function myFunction() {
+  myOtherFunction();
+}
+
+function myOtherFunction() {
+  console.trace();
+}
+
+</script>
+
+</body>
+</html>
+

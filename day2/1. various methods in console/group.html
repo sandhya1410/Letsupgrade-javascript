@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript console.group() Method</h1>
+
+<p>The console.group() method indicates the start of a message group.<br>
+
+All messages will from now on be written inside this group.<br>
+
+ Use the console.groupEnd() method to end the group.<br>
+
+ Use the console.groupCollapsed() method to hide the message group (collapsed by default).</p>
+
+<script>
+//method 1
+console.log("Hello world!");
+//method 2
+console.groupCollapsed();
+console.log("Hello again, this time inside a collapsed group!");
+
+//method 3
+console.group();
+console.log("Hello again, this time inside a group!");
+console.log("Hello again");
+console.log("Hello ****");
+//method 4
+console.groupEnd();
+console.log("out of group.");
+
+
+
+</script>
+
+</body>
+</html>
