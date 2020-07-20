@@ -1,0 +1,258 @@
+<html>
+	<head>
+		<title>Day3 Assignment</title>
+	</head>
+	<body>
+		<h1 align="center">String Methods</h1>
+		<h2>charCodeAt</h2>
+			<p>
+				<ul>
+					<li>The charCodeAt() method returns the Unicode of the character at the specified index in a string.</li>
+				<li>The index of the first character is 0, the second character 1, and so on.</li>
+				<li>Gives ASCII values like H=72,E=69...</li></ul>
+				</strong>
+			</p>
+					<script type="text/javascript">
+
+						str6 = "HELLO WORLD";
+						let n2 = str6.charCodeAt(1);
+						  console.log(n2);
+
+			  		</script>
+
+  		<h2>fromCharCode</h2>
+					<p>
+						The fromCharCode() method converts Unicode values into characters.
+					</p>
+					<script type="text/javascript">
+						
+						  let res = String.fromCharCode(69);
+						  console.log(res);
+
+					</script>
+
+		<h2>includes</h2>
+			<p>
+				<ul>
+				  <li>The includes() method determines whether a string contains the characters of a specified string.</li>
+
+					<li>This method returns true if the string contains the characters, and false if not.</li>
+
+					<li>The includes() method is case sensitive.</li></ul>
+
+				</strong>
+			</p>
+					<script type="text/javascript">
+						
+						str = "Hello world, welcome to the universe.";
+				  		var n = str.includes("welcome");
+				  		console.log(n);
+
+					</script>
+
+		<h2>localeCompare</h2>
+
+			<p>The localeCompare method returns a number indicating whether str1 comes before, after or is the same as str2 in sort order. 
+				<ul>
+				  <li>Returns -1 if str1 is sorted before str2</li>
+				  <li>Returns 0 if the two strings are equal</li> 
+				  <li>Returns 1 if str1 is sorted after str2</li>
+				</ul>
+			</p>
+					<script type="text/javascript">
+						
+						let str4 = "abc";
+						let str5 = "ee";
+						let n1 = str4.localeCompare(str5);
+				  		console.log(n1);
+
+					</script>
+
+			<h2>match</h2>
+
+			<p>		
+				Click the button to perfom a global search for the letters "ain" in a string, and 		display the matches.
+			</p> 
+				
+					<script type="text/javascript">
+						
+						str = "The rain in SPAIN stays mainly in the plain"; 
+  						var res3 = str.match(/ain/g);
+				  		console.log(res3		);
+
+					</script>
+
+			<h2>repeat</h2>
+
+			<p>		
+				The repeat() method returns a new string with a specified number of copies of the string it was called on.
+
+
+			</p> 
+				
+					<script type="text/javascript">
+						
+						 str = "Hello world!";
+  						let res2 = str.repeat(4);
+				  		console.log(res2);
+
+					</script>
+
+			<h2>replace</h2>
+
+			<p>		
+				The replace() method searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced.
+
+			</p> 
+				
+					<script >
+						
+						str1="Microsoft";
+						let res1 = str1.replace("Microsoft", "W3Schools");
+				  		console.log(res1);
+
+					</script>
+
+			<h2>search</h2>
+
+			<p>		
+				The search() method searches a string for a specified value, and returns the position of the match.
+			</p> 
+				
+					<script >
+						
+						str7 = "String Methods in javascript!"; 
+  						let n3 = str7.search("Methods");
+				  		console.log(n3);
+
+					</script>
+
+			<h2>slice</h2>
+
+			<p>		
+				<ul>
+					<li>The slice() method extracts parts of a string and returns the extracted parts in a new string.</li>
+
+					<li>Use the start and end parameters to specify the part of the string you want to extract.</li>
+
+				<li>The first character has the position 0, the second has position 1, and so on.</li>
+
+				<li> Use a negative number to select from the end of the string.</li></ul>
+			</p> 
+				
+					<script >
+						
+						str8 = "String Methods!"; 
+  						let n4 = str8.slice(0, 8);
+				  		console.log(n4);
+
+					</script>
+
+			<h2>split</h2>
+
+			<p>		
+				<ul>
+					<li>The split() method is used to split a string into an array of substrings, and returns the new array.</li>
+
+					<li>If an empty string ("") is used as the separator, the string is split between each character.</li>
+
+					<li>The split() method does not change the original string.</li></ul>
+
+			</p> 
+				
+					<script >
+						
+						str9 = "How are you doing today?";
+  						let n5 = str9.split(" ");
+				  		console.log(n5);
+
+					</script>
+
+			<h2>substr</h2>
+
+			<p>		
+				<ul>
+					<li>The substr() method extracts parts of a string, beginning at the character at the specified position, and returns the specified number of characters.</li>
+
+					<li>extract characters from the end of the string, use a negative start number (This does not work in IE 8 and earlier).</li>
+
+					<li>The substr() method does not change the original string.</li></ul>
+
+			</p> 
+				
+					<script >
+						
+						str10 = "Hello world!";
+  						let n6 = str10.substr(1, 4);
+				  		console.log(n6);
+
+					</script>
+
+			<h2>substring</h2>
+
+			<p>		
+				<ul>
+					<li>The substring() method extracts the characters from a string, between two specified indices, and returns the new sub string.</li>
+
+					<li>This method extracts the characters in a string between "start" and "end", not including "end" itself.</li>
+
+					<li>If "start" is greater than "end", this method will swap the two arguments, meaning str.substring(1, 4) == str.substring(4, 1).</li>
+					<li>The substring() method does not change the original string.</li></ul>
+
+			</p> 
+				
+					<script >
+						
+						str11 = "Hello world!";
+  						let n7 = str11.substring(1, 7);
+				  		console.log(n7);
+
+					</script>
+
+			<h2>tostring</h2>
+
+			<p>		
+				The toString() method returns the value of a String object.
+			</p> 
+				
+					<script >
+						
+						 str12 = "Hello World!";
+						 let n8 = str12.toString();				  		
+						 console.log(n8);
+
+					</script>
+
+			<h2>trim</h2>
+
+			<p>		
+				The trim() method removes whitespace from both sides(end) of a string.
+			</p> 
+				
+					<script >
+						
+						 str13 = "     removing space     ";
+						 let n9 = str13.trim()				  		
+						 console.log(n9);
+
+					</script>
+
+			<h2>valueof</h2>
+
+			<p>		
+				The valueOf() method returns the primitive value of a String object.
+			</p> 
+				
+					<script >
+						
+						 str14 = "Valueof!";
+  						 let n10 = str14.valueOf();			  		
+						 console.log(n10);
+
+					</script>
+
+
+
+	</body>
+</html>
+
