@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Question 4</title>
+</head>
+<body>
+   <p>Make aCalculator </p>
+<script> 
+         
+        let calculator = function(operator){
+    let result;
+    let operand1=parseInt(window.prompt('Enter first number : ',0));
+    let operand2=parseInt(window.prompt('Enter second number : ',0));
+    switch (operator) {
+        
+        case '1': result = operand1 + operand2;
+                return `${operand1} + ${operand2} = ${result}`;
+            break;
+        case '2': result = operand1 - operand2;
+                return `${operand1} - ${operand2} = ${result}`;
+            break;
+        case '3': result = operand1 * operand2;
+                return `${operand1} * ${operand2} = ${result}`;
+            break;
+        case '4': result = operand1 / operand2;
+            return `${operand1} / ${operand2} = ${result}`;
+            break;
+        case '5': result = operand1 % operand2;
+            return `${operand1} % ${operand2} = ${result}`;
+            break;
+        default:
+            return 'invalid choice';
+            break;
+    }
+}
+
+let squareRoot = (num) => Math.sqrt(num);
+let num;
+        let operation = window.prompt(`Enter your choice :
+        1 for Addition
+        2 for Subtraction
+        3 for Multiplication
+        4 for Division
+        5 for Modulous
+        6 for Finding root of a number
+        and
+        0 to exit`,1);
+
+        if(operation == '6') {
+            num = window.prompt('Enter a number : ',1);
+            console.log(`The square root of ${num} : ${squareRoot(num)}`); 
+        }else if(operation == '0'){
+            console.log("you have exited.");
+        }else{
+            console.log(calculator(operation));
+        } 
+
+      </script> 
+</body>
+</html>

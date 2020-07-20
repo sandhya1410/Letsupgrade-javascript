@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question 6</title>
+</head>
+<body>
+	<p><b>Replace the function Expressions with arrow functions in the code below</b><br><br>
+	function ask(question, yes, no){<br>
+			if(confirm(question)) yes()<br>
+				else no();<br>
+		}<br>
+		ask(<br>
+			"Do you agree?",<br>
+			function() { alert("you agreed.");},<br>
+			function() { alert("you canceled the execution.");}<br>
+			);
+		</p>
+
+
+	<script type="text/javascript">
+		let ask = (question, yes, no) => confirm(question) ? yes() : no();
+		ask(
+		'Do you agree?',
+		() => console.log('You agreed'),
+		() => console.log('You canceled the execution.'),
+		);
+	</script>
+
+
+</body>
+</html>
