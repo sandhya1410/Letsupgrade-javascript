@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 2</title>
+  </head>
+  <body>
+<p> Create a class User with properties as name, age and email.
+He can login and logout
+Create another class Moderator which has all the features of User, plus additional functionality to Add coins and remove coins.
+Create one more class Admin which has all the features of Moderator plus additional features like add a course  and delete a particular for a user .</p>
+<script type="text/javascript">
+  class User {
+   constructor(name, age,email) {
+     this.name = name;
+     this.age = age;
+     this.email = email;
+     this.luCoins = 0;
+     this.courses = [];
+   }
+
+   login(){
+       console.log(`${this.name} has logged in`);
+       return this;
+   }
+   logout(){
+       console.log(`${this.name} has logged out`);
+       return this;
+   }
+}
+
+class Moderator extends User{
+   constructor(name,age,email,role){
+       super(name,age,email);
+       this.role = role;
+   }
+   addCoins(user,coins){
+        user.luCoins+=coins;
+        console.log(`${user.name} has ${user.luCoins} coins`);
+        return user;
+    }
+
+    removeCoins(user,coins){
+        user.luCoins-=coins;
+        console.log(`${user.name} has ${user.luCoins} coins`);
+        return user;
+    }
+
+}
+
+class Admin extends Moderator{
+  addCourse(user,course){
+      user.courses.push(course);
+      console.log(user);
+  }
+  deleteCourse(user){
+          console.log(`removed course ${user.courses.pop()} from object ${user.name}`);
+      }
+}
+
+
+let user1 = new User('abc',25,'abc@gmail.com')
+let user2 = new User('xyz',24,'xyz@gmai.com')
+let mod = new Moderator('uvw',24,'uvw@gmail.com','Moderator');
+let admin = new Admin('ajay',25,'a@gmail.com');
+let users = [user1,user2,mod,admin];
+
+user1.login().logout();
+
+    mod.login().addCoins(user1,5);
+    mod.removeCoins(user1,3);
+    mod.logout();
+
+    admin.login();
+    admin.addCourse(user1,'Javascript');
+    admin.addCourse(user1,'Python');
+
+    admin.deleteCourse(user2);
+
+users.forEach(element => {
+   console.log(element);
+});
+
+admin.logout();
+
+</script>
+  </body>
+</html>
