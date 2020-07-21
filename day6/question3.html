@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 3</title>
+  </head>
+  <body>
+    <p><b>Make a webpage that will ask the name of the user.
+      Then will display a welcome message on the webpage.
+       Also the webpage should also have a clock.<br>
+     Use the toggle method of classList and a bark mode feature to the website. </b></p>
+
+    <h1 id="title"></h1>
+     <h4 id="time"></h4>
+
+     <script type="text/javascript">
+
+      function changeColor(){
+        setTimeout(()=>{
+            document.body.style.backgroundColor='black';
+            document.body.style.color='white';
+            document.body.style.fontFamily='Helvetica';
+            },8000);
+        }
+
+        changeColor();
+
+      
+
+     // get name from user and change the title
+      const name = prompt("Enter your name","");
+
+      title.innerText += `Welcome to the family ${name}`;
+
+      //Time
+      const ctime = document.getElementById('time');
+
+
+      function clock(){
+          let date = new Date();
+          let time = date.toLocaleTimeString();
+          ctime.innerText = time;
+      }
+
+      // clock();
+
+      setInterval(clock,1000);
+
+
+
+     </script>
+
+  </body>
+</html>
